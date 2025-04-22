@@ -506,6 +506,28 @@
                 <span class="total-time">00:00</span>
             </span>
         </button>
+         <button class="sound-button" onclick="playSound('tung')">
+            <img src="tung.jpg" alt="tung">
+            <span class="sound-name"> tung</span>
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+            </div>
+            <span class="time-display">
+                <span class="current-time">00:00</span>
+                <span class="total-time">00:00</span>
+            </span>
+        </button>
+         <button class="sound-button" onclick="playSound('trippi')">
+            <img src="trippi.jpg" alt="trippi">
+            <span class="sound-name"> trippi</span>
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+            </div>
+            <span class="time-display">
+                <span class="current-time">00:00</span>
+                <span class="total-time">00:00</span>
+            </span>
+        </button>
     </div>
     <div class="global-controls">
         <button class="control-button" onclick="togglePause()">⏸️</button>
@@ -532,7 +554,9 @@
             'batatoso' : 'batatoso.mp3',
             'udin' : 'udin.mp3',
             'liri' : 'liri.mp3',
-            'glorbo' : 'glorbo.mp3'
+            'glorbo' : 'glorbo.mp3',
+            'trippi' : 'trippi.mp3',
+            'tung' : 'tung.mp3',
         };
 
         let currentAudio = null;
