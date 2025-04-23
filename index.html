@@ -49,8 +49,8 @@
             z-index: 1;
         }
         .sound-button {
-            background: rgba(255, 255, 255, 0.1);
-            border: 2px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.15);
+            border: 2px solid rgba(255, 255, 255, 0.3);
             color: white;
             padding: 25px;
             text-align: center;
@@ -67,7 +67,7 @@
             min-width: 150px;
             transform-style: preserve-3d;
             perspective: 1000px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
         }
         .sound-button::before {
             content: '';
@@ -99,11 +99,11 @@
         }
         .sound-button:hover {
             transform: translateY(-8px) scale(1.05) rotateX(5deg);
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.25);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4),
-                        0 0 30px rgba(255, 255, 255, 0.2),
-                        0 0 50px rgba(78, 205, 196, 0.3);
-            border-color: rgba(255, 255, 255, 0.3);
+                        0 0 30px rgba(255, 255, 255, 0.3),
+                        0 0 50px rgba(78, 205, 196, 0.4);
+            border-color: rgba(255, 255, 255, 0.4);
         }
         .sound-button:active {
             transform: scale(0.95) rotateX(-5deg);
@@ -112,8 +112,8 @@
                         0 0 60px rgba(0, 255, 0, 0.6);
         }
         .sound-button.playing {
-            background: rgba(0, 255, 0, 0.2);
-            border-color: rgba(0, 255, 0, 0.8);
+            background: rgba(0, 255, 0, 0.3);
+            border-color: rgba(0, 255, 0, 0.9);
             animation: pulse 1.5s infinite, glow 2s infinite, float 3s ease-in-out infinite;
         }
         @keyframes float {
@@ -191,11 +191,11 @@
         .progress-container {
             width: 100%;
             height: 8px;
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.15);
             border-radius: 4px;
             margin-top: 10px;
             overflow: hidden;
-            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
             position: relative;
         }
         .progress-container::after {
@@ -214,10 +214,10 @@
         }
         .progress-bar {
             height: 100%;
-            background: linear-gradient(90deg, #ff9a9e, #fad0c4);
+            background: linear-gradient(90deg, #4ecdc4, #45b7af);
             width: 0%;
             transition: width 0.1s linear;
-            box-shadow: 0 0 10px rgba(255, 154, 158, 0.5);
+            box-shadow: 0 0 10px rgba(78, 205, 196, 0.6);
             position: relative;
             z-index: 1;
         }
@@ -610,8 +610,6 @@
         }
 
         function playSound(soundName) {
-            if (isPaused) return;
-
             // Arrêter le son en cours si nécessaire
             if (currentAudio) {
                 currentAudio.pause();
