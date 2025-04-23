@@ -572,9 +572,6 @@
                 <span class="total-time">00:00</span>
             </span>
         </button>
-    <div class="global-controls">
-        <button class="control-button" onclick="togglePause()">⏸️</button>
-    </div>
 
     <script>
         const sounds = {
@@ -631,30 +628,6 @@
             }
         }
 
-        function togglePause() {
-            isPaused = !isPaused;
-            const pauseButton = document.querySelector('.control-button');
-            
-            if (isPaused) {
-                pauseButton.classList.add('paused');
-                pauseButton.textContent = '▶️';
-                if (currentAudio) {
-                    currentAudio.pause();
-                }
-                document.querySelectorAll('.sound-button').forEach(button => {
-                    button.classList.add('paused');
-                });
-            } else {
-                pauseButton.classList.remove('paused');
-                pauseButton.textContent = '⏸️';
-                if (currentAudio) {
-                    currentAudio.play();
-                }
-                document.querySelectorAll('.sound-button').forEach(button => {
-                    button.classList.remove('paused');
-                });
-            }
-        }
 
         function playSound(soundName) {
             // Arrêter le son en cours si nécessaire
