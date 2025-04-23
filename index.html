@@ -528,6 +528,28 @@
                 <span class="total-time">00:00</span>
             </span>
         </button>
+         <button class="sound-button" onclick="playSound('cappuccino')">
+            <img src="cappuccino.webp" alt="cappuccino">
+            <span class="sound-name"> cappuccino</span>
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+            </div>
+            <span class="time-display">
+                <span class="current-time">00:00</span>
+                <span class="total-time">00:00</span>
+            </span>
+        </button>
+         <button class="sound-button" onclick="playSound('dicus')">
+            <img src="dicus.jpg" alt="dicus">
+            <span class="sound-name"> dicus</span>
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+            </div>
+            <span class="time-display">
+                <span class="current-time">00:00</span>
+                <span class="total-time">00:00</span>
+            </span>
+        </button>
     </div>
     <div class="global-controls">
         <button class="control-button" onclick="togglePause()">⏸️</button>
@@ -557,6 +579,8 @@
             'glorbo' : 'glorbo.mp3',
             'trippi' : 'trippi.mp3',
             'tung' : 'tung.mp3',
+            'cappuccino' : 'cappuccino.mp3',
+            'dicus' : 'dicus.mp3',
         };
 
         let currentAudio = null;
